@@ -37,8 +37,8 @@ def ssh(node: str, command: str) -> str:
     device = {
         'device_type': 'cisco_ios',  # or the appropriate device type
         'host': node,
-        'username': 'admin',
-        'password': 'C1sco12345', 
+        'username': 'xxxxx',
+        'password': 'xxxxx', 
     }
 
     try:
@@ -57,7 +57,7 @@ llm = ChatGroq(
     max_tokens=None,
     timeout=None,
     max_retries=2,
-    api_key="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"
+    api_key="XXXXXXX"
 )
 
 tools=[ssh]
