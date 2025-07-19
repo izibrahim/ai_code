@@ -90,7 +90,7 @@ def ssh(node: str, command: str) -> str:
 tools=[ssh]
 llm_with_tools=llm.bind_tools(tools)
 
-sys_msg = SystemMessage(content="You Sr.Network engineer you will prompt you the node name and ask for the command to execute on the Cisco IOS XR router, you should come up with the command and execute it.")
+sys_msg = SystemMessage(content="Your Sr.Network engineer User will prompt you the node name and ask for the command to execute on the Cisco IOS XR router, you should come up with the command and execute it.")
 
 def assistant(state:MessagesState):
     return {"messages":[llm_with_tools.invoke([sys_msg] + state["messages"])]}
